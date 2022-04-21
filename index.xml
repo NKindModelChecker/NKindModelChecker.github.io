@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NKind - A model checker for Lustre</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on NKind - A model checker for Lustre</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Document</title>
+      <link>http://localhost:1313/document/</link>
+      <pubDate>Thu, 07 Apr 2022 20:55:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/document/</guid>
+      <description>Document Requirement In order to run NKind, the following software are necessary to be installed in the system:
+ Java 11 or later Z3  Usage NKind is used in command line environment by specifying the Lustre input.
+1  nkind example.lus   Arguments list below can also be specified to control the operation:
+ --max-round &amp;lt;INTEGER&amp;gt; set the max unroll length in BMC. --timeout &amp;lt;INTEGER&amp;gt; set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached.</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://localhost:1313/download/</link>
+      <pubDate>Thu, 07 Apr 2022 15:15:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/download/</guid>
+      <description>Download Version 1.0.0
+Click here(md5|sha1) to get the latest version of NKind.
+Click here(md5|sha1) to get examples for NKind.
+License NKind is copyrighted 2021-2022 by East China Normal University, Shanghai, China. All rights reserved.
+NKind is available for research and evaluation purposes only and can not be used in a commercial environment. NKind is provided as is, without warranties or conditions of any kind.</description>
+    </item>
+    
+    <item>
+      <title>Main</title>
+      <link>http://localhost:1313/main/</link>
+      <pubDate>Wed, 06 Apr 2022 21:50:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/main/</guid>
+      <description>Introduction NKind is an SMT-based infinite-state model checking tool, which is mainly used for proving or disproving properties of synchronous reactive system models written in Lustre.
+NKind mainly relies on te powerful SMT-solver Z3 to validate or invalidate the properties. For properties that are proved to be invalid, a counterexample will be returned. Apart from the traditional verification for safety properties, NKind supports liveness properties as well, bridging the gap in liveness property checking in Lustre.</description>
+    </item>
+    
+  </channel>
+</rss>

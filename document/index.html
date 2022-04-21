@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Document - NKind - A model checker for Lustre</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Software Engineering Institute of East China Normal University" /><meta name="description" content="Document Requirement In order to run NKind, the following software are necessary to be installed in the system:
+ Java 11 or later Z3  Usage NKind is used in command line environment by specifying the Lustre input.
+1  nkind example.lus   Arguments list below can also be specified to control the operation:
+ --max-round &amp;lt;INTEGER&amp;gt; set the max unroll length in BMC. --timeout &amp;lt;INTEGER&amp;gt; set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached." />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/document/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b874a8796a492f0d7c86bb24c33cbf052935783a5778ebaf819a8e514bf49f10.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Document" />
+<meta property="og:description" content="Document Requirement In order to run NKind, the following software are necessary to be installed in the system:
+ Java 11 or later Z3  Usage NKind is used in command line environment by specifying the Lustre input.
+1  nkind example.lus   Arguments list below can also be specified to control the operation:
+ --max-round &lt;INTEGER&gt; set the max unroll length in BMC. --timeout &lt;INTEGER&gt; set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/document/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2022-04-07T20:55:48+08:00" />
+<meta property="article:modified_time" content="2022-04-07T20:55:48+08:00" />
+
+<meta itemprop="name" content="Document">
+<meta itemprop="description" content="Document Requirement In order to run NKind, the following software are necessary to be installed in the system:
+ Java 11 or later Z3  Usage NKind is used in command line environment by specifying the Lustre input.
+1  nkind example.lus   Arguments list below can also be specified to control the operation:
+ --max-round &lt;INTEGER&gt; set the max unroll length in BMC. --timeout &lt;INTEGER&gt; set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached."><meta itemprop="datePublished" content="2022-04-07T20:55:48+08:00" />
+<meta itemprop="dateModified" content="2022-04-07T20:55:48+08:00" />
+<meta itemprop="wordCount" content="946">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Document"/>
+<meta name="twitter:description" content="Document Requirement In order to run NKind, the following software are necessary to be installed in the system:
+ Java 11 or later Z3  Usage NKind is used in command line environment by specifying the Lustre input.
+1  nkind example.lus   Arguments list below can also be specified to control the operation:
+ --max-round &lt;INTEGER&gt; set the max unroll length in BMC. --timeout &lt;INTEGER&gt; set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <img src="/logo.png" href="/" width="113" height="34">
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/main">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/document/">
+        <li class="mobile-menu-item">Document</li>
+      </a><a href="/download/">
+        <li class="mobile-menu-item">Download</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+    <img src="/logo.png" href="/" width="142" height="57">
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/main">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/document/">Document</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/download/">Download</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h1 id="document">Document</h1>
+<h2 id="requirement">Requirement</h2>
+<p>In order to run NKind, the following software are necessary to be installed in the system:</p>
+<ul>
+<li>Java 11 or later</li>
+<li>Z3</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>NKind is used in command line environment by specifying the Lustre input.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nkind example.lus
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Arguments list below can also be specified to control the operation:</p>
+<ul>
+<li><code>--max-round &lt;INTEGER&gt;</code> set the max unroll length in BMC.</li>
+<li><code>--timeout &lt;INTEGER&gt;</code> set the verification timeout, and UNKNOWN will be returned if timeout threshold is reached.</li>
+<li><code>--make-counterexample &lt;true/false&gt;</code> specifies whether to make counterexample if a property is disproved.</li>
+<li><code>--use-bmc &lt;true/false&gt;</code>, <code>--use-kinduction &lt;true/false&gt;</code>, <code>--use-invgen &lt;true/false&gt;</code>, <code>--use-kinduction-ia &lt;true/false&gt;</code> decide whether to enable a corresponding engine or not.</li>
+<li><code>--pdr-max &lt;INTEGER&gt;</code> set the maximum number of pdr threads run in parallel, which is useful when input has multiple properties.</li>
+<li><code>--main &lt;STRTING&gt;</code> specify the top-level node name.</li>
+</ul>
+<h2 id="lustre">Lustre</h2>
+<p>Lustre is a synchronous dataflow language for modeling real-time reactive systems.
+NKind supports an extension to Lustre V4 syntax.</p>
+<h3 id="example">Example</h3>
+<p>Let us start with a simple example, which declares a single node <code>main</code>.
+The line <code>--%MAIN;</code> means that the node is the top-level node, and <code>--%PROPERTY Safe e1;</code> specify that the <code>e1</code> is the property we want to verify.
+The word <code>Safe</code> is used to specify the property type, which means that the property should always hold.
+On the contrary, <code>Live</code> means that the property could be violated for a while, but it will finally hold forever.
+Note that it is recommended that the property is the name of a defined stream rather than an expression, since the expression will be rewrite as a stream like <code>ANONY_PROP_&lt;integer&gt; = &lt;expression&gt;</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node main() returns(x: int; y: int; f: bool);
+</span></span><span class="line"><span class="cl">var
+</span></span><span class="line"><span class="cl">    e1: bool;
+</span></span><span class="line"><span class="cl">    counter: int;
+</span></span><span class="line"><span class="cl">let
+</span></span><span class="line"><span class="cl">    x = 20 -&gt; (pre x) + 1;
+</span></span><span class="line"><span class="cl">    y = 0 -&gt; (pre y) + 2;
+</span></span><span class="line"><span class="cl">    f = false -&gt; pre x &lt; pre y;
+</span></span><span class="line"><span class="cl">    counter = 0 -&gt; pre counter + 1;
+</span></span><span class="line"><span class="cl">    e1 = (counter &gt; 21) =&gt; f;
+</span></span><span class="line"><span class="cl">    --%MAIN;
+</span></span><span class="line"><span class="cl">    --%PROPERTY Safe e1;
+</span></span><span class="line"><span class="cl">tel;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Using the above program as input, NKind produce the following output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">================================================================================
+</span></span><span class="line"><span class="cl">VALID PROPERTIES: [Safety Property: e1] || KInduction || Step = 22 || Time = 940 ms
+</span></span><span class="line"><span class="cl">================================================================================
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    -------------------------------------
+</span></span><span class="line"><span class="cl">                    ------        SUMMARY          ------
+</span></span><span class="line"><span class="cl">                    -------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">VALID PROPERTIES: [Safety Property: e1]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="clock-operator">Clock Operator</h3>
+<p>NKind supports <code>when</code>, <code>activate</code> <code>restart</code> and <code>merge</code> operators.</p>
+<h4 id="whenactivate">when/activate</h4>
+<p><code>when</code> and <code>activate</code> are similiar, and the difference is that <code>when</code> is applied to expression, but <code>activate</code> is applied to a node call.
+For example, suppose we have a node <code>plus_one</code> as:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node plus_one(i: int) returns(r: int);
+</span></span><span class="line"><span class="cl">let
+</span></span><span class="line"><span class="cl">    r = i + 1;
+</span></span><span class="line"><span class="cl">tel;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If we would like to enable <code>plus_one</code> according to a clock, we can write <code>(activate plus_one every &lt;clock&gt;)(&lt;input&gt;)</code> or <code>plus_one(&lt;input&gt;) when &lt;clock&gt;</code>, where <code>&lt;input&gt;</code> is the input of the callee and <code>&lt;clock&gt;</code> is a boolean stream.
+It is worth mentioning that when clock is <code>false</code>, the value of the expression is undefined.</p>
+<h4 id="restart">restart</h4>
+<p>Sometimes we may want to reset a node to its initial state (i.e. reset all the internal state), so NKind provide <code>restart</code> operator.
+The syntax is similar to <code>activate</code>, i.e. <code>(activate &lt;node&gt; every &lt;clock&gt;)(&lt;input&gt;)</code>, and will reset the callee every time the clock is <code>true</code>.</p>
+<h4 id="merge">merge</h4>
+<p><code>merge</code> combines several streams on complementary clocks.
+It takes clock and corresponding branch as argument.
+For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node callee(in : int) returns(out : int);
+</span></span><span class="line"><span class="cl">let
+</span></span><span class="line"><span class="cl">  out = (in + (0 -&gt; (pre (1 -&gt; (pre out)))));
+</span></span><span class="line"><span class="cl">tel;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">node main() returns (result : int);
+</span></span><span class="line"><span class="cl">var
+</span></span><span class="line"><span class="cl">  flag : bool;
+</span></span><span class="line"><span class="cl">  e1 : bool;
+</span></span><span class="line"><span class="cl">let
+</span></span><span class="line"><span class="cl">  flag = (false -&gt; (not (pre flag)));
+</span></span><span class="line"><span class="cl">  result = (merge flag(true ==&gt; (activate callee every flag)(1))(false ==&gt; (1 when (not flag))));
+</span></span><span class="line"><span class="cl">  e1 = (result = 1);
+</span></span><span class="line"><span class="cl">  --%MAIN;
+</span></span><span class="line"><span class="cl">  --%PROPERTY e1;
+</span></span><span class="line"><span class="cl">tel;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>As we have mentioned before, clock may introduce undefined value.
+To avoid such situation, we refer to Kind 2&rsquo;s approach and restrict the usage of <code>activate</code> and <code>when</code> in <code>merge</code>.</p>
+<h3 id="automaton">Automaton</h3>
+<p><em>Experimental feature.</em></p>
+<p>In some cases it will be helpful to allow specifying different stream definitions under different running modes.
+Referring to Kind 2, NKind provides hierarchical automata.
+Although it does not enhance the expressiveness since such automata can be converted to equivalent program in core Lustre, it may simplify the process of modeling.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">automaton &lt;automaton_name&gt;
+</span></span><span class="line"><span class="cl">    initial state &lt;state_name&gt;
+</span></span><span class="line"><span class="cl">    unless if &lt;condition&gt; &lt;restart/resume&gt; &lt;state_name&gt;
+</span></span><span class="line"><span class="cl">           elif &lt;condition&gt; &lt;restart/resume&gt; &lt;state_name&gt;;
+</span></span><span class="line"><span class="cl">    end
+</span></span><span class="line"><span class="cl">    var
+</span></span><span class="line"><span class="cl">        &lt;variable_declarations&gt;
+</span></span><span class="line"><span class="cl">    let
+</span></span><span class="line"><span class="cl">        &lt;equations&gt;
+</span></span><span class="line"><span class="cl">    tel
+</span></span><span class="line"><span class="cl">    unless if &lt;condition&gt; &lt;restart/resume&gt; &lt;state_name&gt;
+</span></span><span class="line"><span class="cl">           elif &lt;condition&gt; &lt;restart/resume&gt; &lt;state_name&gt;;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    state &lt;state_name&gt;
+</span></span><span class="line"><span class="cl">    let
+</span></span><span class="line"><span class="cl">        ...
+</span></span><span class="line"><span class="cl">    tel
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Automata can be defined inside a node or nested in an automaton state, like equations.</p>
+<p>Each state is associated with a state name.
+The initial state should be marked as <code>initial</code>.
+Similar to node, a state can have local variables.
+In order to communicate between states, <code>last</code> operator can refer to the stream value of previous round even if the value came from another state.
+On the contrary, <code>pre</code> operator can only refer to the value that was last evaluated in current state.</p>
+<p>Like tradition state machine, states can have transitions, which can be strong (unless) or weak (until).
+Strong transition is evaluated before evaluation of the state, while weak transition is after the evaluation.
+Transitions are optional, and if no transition is applicable or defined, the automaton will remain in the same state.
+A transition can restart or resume the target state.
+If a state is resumed, it remains the state when it was last executed.
+If a state is restarted, the internal state of the state will be reset to the initial value.</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021 - 
+    2022<span class="heart">
+
+      <span>Software Engineering Institute of East China Normal University</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
